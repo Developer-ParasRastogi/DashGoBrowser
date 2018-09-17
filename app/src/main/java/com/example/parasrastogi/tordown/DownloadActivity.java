@@ -42,6 +42,9 @@ public class DownloadActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_download);
+
+
+        //triggering full screen view
         this.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -65,7 +68,7 @@ public class DownloadActivity extends AppCompatActivity {
 
     }
 
-
+/*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -109,7 +112,7 @@ public class DownloadActivity extends AppCompatActivity {
 
 
     }
-
+*/
     /**
      * A placeholder fragment containing a simple view.
      */

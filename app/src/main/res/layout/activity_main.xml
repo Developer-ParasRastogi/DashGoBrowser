@@ -81,7 +81,7 @@
         android:layout_toRightOf="@+id/socialico"
         android:text="Social"
         android:textColor="#000"
-        android:textSize="20dp"
+        android:textSize="16dp"
         android:textAlignment="center"/>
 
 
@@ -113,61 +113,61 @@
 
     <!--facebook-->
     <ImageButton
-        android:layout_width="79dp"
         android:id="@+id/fblogo"
-        android:layout_height="109dp"
-        android:layout_marginLeft="15dp"
+        android:layout_width="79dp"
+        android:layout_height="88dp"
         android:layout_alignTop="@+id/divider2"
+        android:layout_marginLeft="15dp"
         android:background="@null"
-        android:paddingTop="10dp"
         android:onClick="facebookin"
+        android:paddingTop="10dp"
         android:src="@drawable/fb" />
     
     
     <!-- twitter-->
     <ImageButton
-        android:layout_width="79dp"
         android:id="@+id/twitterlogo"
-        android:layout_height="109dp"
+        android:layout_width="79dp"
+        android:layout_height="88dp"
         android:layout_below="@+id/textView"
+        android:layout_marginLeft="15dp"
         android:layout_toEndOf="@+id/fblogo"
+        android:layout_toRightOf="@+id/fblogo"
         android:background="@null"
         android:onClick="twitterin"
-        android:layout_marginLeft="15dp"
         android:paddingTop="10dp"
-        android:src="@drawable/twitter"
-        android:layout_toRightOf="@+id/fblogo" />
+        android:src="@drawable/twitter" />
 
 
     <!--instagram -->
 
     <ImageButton
-        android:layout_width="79dp"
-        android:layout_height="109dp"
         android:id="@+id/instagramlogo"
+        android:layout_width="79dp"
+        android:layout_height="88dp"
         android:layout_below="@+id/textView"
+        android:layout_marginLeft="15dp"
         android:layout_toEndOf="@+id/twitterlogo"
+        android:layout_toRightOf="@+id/twitterlogo"
         android:background="@null"
         android:onClick="instagramin"
-        android:layout_marginLeft="15dp"
         android:paddingTop="10dp"
-        android:src="@drawable/instagram"
-        android:layout_toRightOf="@+id/twitterlogo" />
+        android:src="@drawable/instagram" />
 
 
     <!--youtube-->
 
     <ImageButton
         android:layout_width="79dp"
-        android:layout_height="109dp"
+        android:layout_height="88dp"
         android:layout_below="@+id/textView"
+        android:layout_marginLeft="15dp"
         android:layout_toEndOf="@+id/instagramlogo"
+        android:layout_toRightOf="@+id/instagramlogo"
         android:background="@null"
         android:onClick="youtubein"
-        android:layout_marginLeft="15dp"
         android:paddingTop="10dp"
-        android:src="@drawable/youtube"
-        android:layout_toRightOf="@+id/instagramlogo" />
+        android:src="@drawable/youtube" />
 
 
     <ImageView
@@ -193,7 +193,7 @@
         android:paddingBottom="12dp"
         android:background="@drawable/roundcorners"
         android:textColor="#000"
-        android:textSize="20dp"
+        android:textSize="16dp"
         android:layout_alignLeft="@+id/textView" />
 
     <!--linkedin-->
@@ -201,77 +201,55 @@
     <ImageButton
         android:id="@+id/linkedin"
         android:layout_width="79dp"
-        android:layout_height="109dp"
+        android:layout_height="84dp"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textview2"
-        android:background="@null"
         android:layout_marginLeft="10sp"
+        android:background="@null"
         android:onClick="linkedin"
         android:paddingTop="10dp"
-        android:src="@drawable/linkedin"
-        android:layout_alignParentLeft="true" />
+        android:src="@drawable/linkedin" />
 
     <!-- Quora -->
 
     <ImageButton
         android:layout_width="79dp"
-        android:layout_height="109dp"
+        android:layout_height="86dp"
+        android:layout_alignLeft="@+id/twitterlogo"
         android:layout_alignStart="@+id/twitterlogo"
         android:layout_below="@+id/textview2"
         android:background="@null"
         android:onClick="quorain"
         android:paddingTop="10dp"
-        android:src="@drawable/quora"
-        android:layout_alignLeft="@+id/twitterlogo" />
+        android:src="@drawable/quora" />
 
-
-
-
-
-
-    <!-- navigation bar start-->
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_below="@+id/linkedin"
+        android:background="@drawable/roundcorners"
+        android:paddingBottom="12dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="10dp"
+        android:text="Most Recent"
+        android:textColor="#000"
+        android:textSize="15dp" />
+
+    <ListView
+        android:layout_width="400dp"
+        android:layout_height="135dp"
+        android:layout_alignParentStart="true"
+        android:id="@+id/recentlistview"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
         >
 
-        <ImageButton
-            android:id="@+id/downloads"
-            android:src="@drawable/round_arrow_downward_black_18dp"
-            android:layout_width="0dp"
-            android:onClick="bb"
-            android:background="#fff"
-            android:focusable="true"
-            android:textColor="#000"
-            android:layout_height="40dp"
-            android:text="Back"
-            android:layout_weight="30"
-            android:visibility="visible"
-            android:padding="10sp"
-            android:clickable="true"/>
+    </ListView>
 
-
-
-        <ImageButton
-            android:id="@+id/menu"
-            android:layout_width="0dp"
-            android:onClick="mm"
-            android:visibility="visible"
-            android:layout_height="40dp"
-            android:background="#fff"
-            android:text="menu"
-            android:textColor="#000"
-            android:focusable="true"
-            android:src="@drawable/baseline_menu_black_18dp"
-            android:layout_weight="30"
-            android:clickable="true"
-            />
-
-
-
-    </LinearLayout>
-
-    <!--navigation bar ends-->
 
 </RelativeLayout>

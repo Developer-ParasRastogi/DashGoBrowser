@@ -16,8 +16,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:id="@+id/linearsearchlayout"
         android:layout_marginTop="0dp"
-        android:background="@null"
+        android:background="@drawable/roundcorners"
         tools:visibility="visible">
 
         <ImageView
@@ -34,26 +35,36 @@
 
         <EditText
             android:id="@+id/search_bar"
-            android:layout_width="80dp"
+            android:layout_width="96dp"
             android:layout_height="wrap_content"
-            android:focusableInTouchMode="true"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:textIsSelectable="true"
             android:layout_marginTop="20dp"
             android:layout_weight="50"
-            android:onClick="searchcurrent"
-
             android:background="@drawable/roundcorners"
+            android:focusableInTouchMode="true"
             android:hint="Got More Thoughts ?"
+
             android:inputType="text"
+            android:onClick="searchcurrent"
             android:padding="10dip"
             android:selectAllOnFocus="true"
             android:textColor="#000"
             android:textColorHint="#000"
+            android:textIsSelectable="true"
 
 
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:onClick="goforward"
+            android:id="@+id/forwardbutton"
+            android:background="@null"
+            android:src="@drawable/baseline_arrow_forward_ios_black_18dp"
             />
 
 
@@ -75,64 +86,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
-
             android:layout_marginLeft="0dp"
 
             />
-
-
-        <!-- navigation bar start-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true">
-
-            <ImageButton
-                android:id="@+id/backkey"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="30"
-                android:onClick="backmethod"
-                android:background="#fff"
-                android:clickable="true"
-                android:focusable="true"
-                android:padding="10sp"
-                android:src="@drawable/baseline_arrow_back_ios_black_18dp"
-                android:text="Back"
-                android:textColor="#000"
-                android:visibility="visible" />
-
-            <ImageButton
-                android:id="@+id/forward"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="30"
-                android:onClick="forwardmethod"
-                android:background="#fff"
-                android:clickable="true"
-                android:focusable="true"
-                android:src="@drawable/baseline_arrow_forward_ios_black_18dp"
-                android:text="forward"
-                android:textColor="#000"
-                android:visibility="visible" />
-
-            <ImageButton
-                android:id="@+id/menu"
-                android:layout_width="0dp"
-
-                android:layout_height="40dp"
-                android:layout_weight="30"
-                android:background="#fff"
-                android:clickable="true"
-                android:focusable="true"
-                android:src="@drawable/baseline_menu_black_18dp"
-                android:text="menu"
-                android:textColor="#000"
-                android:visibility="visible" />
-
-
-        </LinearLayout>
-        <!--navigation bar ends-->
 
 
     </RelativeLayout>

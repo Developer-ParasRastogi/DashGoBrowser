@@ -34,10 +34,8 @@
             android:label="@string/title_activity_download"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
         <activity android:name=".SearchBarActivity" />
-
-        <activity android:name=".ListBookmarks">
-
-        </activity>
+        <activity android:name=".ListBookmarks"></activity>
+        <activity android:name=".Aboutactivity"></activity>
     </application>
 
 </manifest>

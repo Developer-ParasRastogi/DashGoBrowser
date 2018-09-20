@@ -144,10 +144,12 @@ public class SearchBarActivity extends AppCompatActivity{
                 startActivity(i);
             }
             break;
-            case R.id.downloads:
+            case R.id.about:
             {
 
-                //thinking what to do
+                Intent j=new Intent(SearchBarActivity.this,Aboutactivity.class);
+                startActivity(j);
+
             }
             break;
             case R.id.exit:
@@ -179,7 +181,7 @@ public class SearchBarActivity extends AppCompatActivity{
         }
         else
         {
-            Toast.makeText(this,"Sorry Couldn't Create Bookmark ! ",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Bookmark Already Exists !",Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -251,11 +253,31 @@ public class SearchBarActivity extends AppCompatActivity{
                     weber.getSettings().setUseWideViewPort(true);
                     weber.getSettings().setLoadWithOverviewMode(true);
                     weber.setWebViewClient(new WebViewClient() {
-                        @Override
+
+                        @Override  //this method is used to load internal links inside webview
                         public boolean shouldOverrideUrlLoading(WebView view, String url) {
                             if (url.matches("^(https?|ftp)://.*$")) {
+                                //insert entry into recent_base database and then load url in webview
+                                mdatabaserecent=new DatabaseRecent(getApplicationContext());
+                                adatarecent(url);
+
+                                //loading message
+                                progressDialog = new ProgressDialog(SearchBarActivity.this);
+                                progressDialog.setMessage("Loading...");
+                                progressDialog.show();
+
+
                                 view.loadUrl(url);
                             } else {
+                                //insert entry into recent_base database and then load url in webview
+                                mdatabaserecent=new DatabaseRecent(getApplicationContext());
+                                adatarecent(url);
+
+                                //loading message
+                                progressDialog = new ProgressDialog(SearchBarActivity.this);
+                                progressDialog.setMessage("Loading...");
+                                progressDialog.show();
+
                                 view.loadUrl("https://www.google.com/search?q=" + url);
                             }
                             return true;

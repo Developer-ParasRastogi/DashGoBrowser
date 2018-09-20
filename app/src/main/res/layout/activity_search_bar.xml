@@ -18,7 +18,7 @@
         android:layout_alignParentTop="true"
         android:id="@+id/linearsearchlayout"
         android:layout_marginTop="0dp"
-        android:background="@drawable/roundcorners"
+        android:background="@null"
         tools:visibility="visible">
 
         <ImageView
@@ -50,8 +50,8 @@
             android:onClick="searchcurrent"
             android:padding="10dip"
             android:selectAllOnFocus="true"
-            android:textColor="#000"
-            android:textColorHint="#000"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
             android:textIsSelectable="true"
 
 

@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity{
 
         //setting color of action bar
         android.support.v7.app.ActionBar bar = getSupportActionBar();
-        bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#0000ff")));
+        bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#004d40")));
 
 
         //fetching listview
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity{
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 final String name = parent.getItemAtPosition(position).toString();
-                Toast.makeText(getApplicationContext(),"Opening"+name,Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Opening"+" "+name,Toast.LENGTH_SHORT).show();
 
                 Handler h=new Handler();
                 h.post(new Runnable() {
@@ -216,9 +216,11 @@ public class MainActivity extends AppCompatActivity{
                 startActivity(i);
             }
             break;
-            case R.id.downloads:
+            case R.id.about:
             {
-                //thinking what to do
+                Intent j=new Intent(MainActivity.this,Aboutactivity.class);
+                startActivity(j);
+
             }
             break;
             case R.id.exit:
@@ -410,6 +412,28 @@ public class MainActivity extends AppCompatActivity{
 
             }
         },600);
+
+    }
+
+
+    public void clearrecents(View view) {
+
+        Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        vibe.vibrate(100);
+        view.startAnimation(buttonClick);
+
+        boolean check=mdatabaserecent.deleterecent();
+        if(check)
+        {
+            Toast.makeText(getApplicationContext(),"Recents Cleared",Toast.LENGTH_SHORT).show();
+            //refreshing recent list view
+            populatelistview();
+
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(),"Recents Already Cleared",Toast.LENGTH_SHORT).show();
+        }
 
     }
 

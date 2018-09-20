@@ -1,36 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splash"
-    tools:context=".SplashActivity">
+    tools:context=".SplashActivity"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:orientation="vertical">
+        <TextView
+            android:textColor="#ecf0f1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DashGo"
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"
+            android:textSize="40sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:textColor="#2ecc71"
+            android:layout_width="398dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+             android:text="One Browser For All"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:layout_marginTop="50dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_marginTop="135dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/spaceullustration">
 
-    <ImageView
-        android:layout_width="135dp"
-        android:layout_height="92dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="191dp"
-        android:src="@drawable/appicon" />
-
-    <TextView
-        android:layout_width="303dp"
-        android:layout_height="46dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="217dp"
-        android:layout_marginEnd="30dp"
-        android:fontFamily="sans-serif-condensed"
-        android:textAlignment="center"
-        android:text="Dash Go"
-        android:textColor="#fff"
-        android:textFontWeight="30"
-        android:textSize="30dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="30dp" />
+    </LinearLayout>
 
 
-</RelativeLayout>
+</LinearLayout>
